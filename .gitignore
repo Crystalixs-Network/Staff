@@ -1,0 +1,15 @@
+###Common exclude
+.gradle
+build/
+out/
+
+.jar
+
+###IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+
+###Do NOT exclude
+!gradle/wrapper/gradle-wrapper.jar

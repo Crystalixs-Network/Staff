@@ -1,0 +1,14 @@
+{
+  "id": "team",
+  "name": "Team",
+  "version": "v1.1.2",
+  "description": "TeamPlugin von Crystalixs.net",
+  "authors": ["thylexx"],
+  "dependencies": [
+    {
+      "id": "luckperms",
+      "optional": false
+    }
+  ],
+  "main": "net.crystalixs.team.Team"
+}
