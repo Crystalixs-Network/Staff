@@ -77,9 +77,7 @@ public class Team {
     private void saveConfig() {
         File parentDir = dataDirectory.toFile();
         if (!parentDir.exists()) {
-            boolean mkdirs;
-            if (parentDir.mkdirs()) mkdirs = true;
-            else mkdirs = false;
+            parentDir.mkdirs();
         }
         Properties properties = new Properties();
         for (Map.Entry<UUID, Boolean> entry : detailedRankMap.entrySet()) {
