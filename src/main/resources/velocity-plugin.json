@@ -1,7 +1,7 @@
 {
   "id": "team",
   "name": "Team",
-  "version": "v1.1.2",
+  "version": "v1.1.3",
   "description": "TeamPlugin von Crystalixs.net",
   "authors": ["thylexx"],
   "dependencies": [
