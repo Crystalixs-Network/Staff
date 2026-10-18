@@ -76,13 +76,18 @@ public class Team {
 
     private void saveConfig() {
         File parentDir = dataDirectory.toFile();
-        if (!parentDir.exists()) {
-            parentDir.mkdirs();
+
+        if (!parentDir.exists() && !parentDir.mkdirs()) {
+            logger.severe("Konnte das Plugin-Verzeichnis nicht erstellen: " + parentDir);
+            return;
         }
+
         Properties properties = new Properties();
+
         for (Map.Entry<UUID, Boolean> entry : detailedRankMap.entrySet()) {
             properties.setProperty(entry.getKey().toString(), String.valueOf(entry.getValue()));
         }
+
         try (FileOutputStream out = new FileOutputStream(configFile)) {
             properties.store(out, "TeamPlugin Player Attributes");
         } catch (IOException e) {
